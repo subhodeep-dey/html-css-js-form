@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<head>
+  <title>Registration Form</title>
+  
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css">
+  
+  
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="script.js"></script>
+</head>
+<body>
+    
+  <h1>Registration Form</h1>
+  <form onsubmit="return validateForm()">
+    
+    <div class="name-container">
+  <div class="name-field">
+    <label for="first-name">First Name:</label>
+    <input type="text" id="first-name" name="first-name" required>
+  </div>
+  <div class="name-field">
+    <label for="last-name">Last Name:</label>
+    <input type="text" id="last-name" name="last-name" required>
+  </div>
+</div>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+    
+    <div class="form-group">
+      <label for="phone">Phone Number:</label>
+        <div id="phone-section">
+        <select id="country-code" name="country-code">
+          <option value="+82" data-country="kr">+82</option>
+          <option value="+81" data-country="jp">+81</option>
+          <option value="+86" data-country="cn">+86</option>
+          <option value="+1" data-country="us">+1</option>
+          <option value="+91" data-country="in">+91</option>
+           <option value="+92" data-country="pk"">+92</option>
+        </select>
+        <input type="text" id="phone-number" name="phone-number" placeholder="Phone Number" required>
+      </div>
+    </div>
+
+
+<label>Password:</label>
+<input type="password" id="password" name="password" oninput="checkPasswordStrength(this.value)" required>
+<div id="password-strength-bar"></div>
+    
+    
+<label>Confirm Password:</label>
+<input type="password" id="confirm-password" name="confirm-password" required>
+    
+    <label>Date of Birth:</label>
+<input type="date" id="dob" name="dob" required>
+
+    <label for="gender">Gender:</label>
+<select id="gender" name="gender">
+  <option value="" disabled selected>Select a gender</option>
+  <option value="male">Male</option>
+  <option value="female">Female</option>
+  <option value="other">Other</option>
+</select>
+
+ <label class="label">Interests:</label>
+<div class="checkbox-group">
+  <label class="label">
+    <input type="checkbox" name="interests[]" value="reading"> Reading
+  </label>
+  <label class="label">
+    <input type="checkbox" name="interests[]" value="sports"> Sports
+  </label>
+  <label class="label">
+    <input type="checkbox" name="interests[]" value="music"> Music
+  </label>
+  <label class="label">
+    <input type="checkbox" name="interests[]" value="travel"> Travel
+  </label>
+</div>
+
+    <label for="country">Country:</label>
+    <!-- Existing HTML code for the countries dropdown menu -->
+
+<select name="country" id="country">
+  <option value="">Select a country</option>
+  <option value="af">Afghanistan</option>
+  <option value="al">Albania</option>
+  <option value="dz">Algeria</option>
+  <option value="ad">Andorra</option>
+  <option value="ao">Angola</option>
+  <option value="ag">Antigua &amp; Deps</option>
+  <option value="ar">Argentina</option>
+  <option value="am">Armenia</option>
+  <option value="au">Australia</option>
+  <option value="at">Austria</option>
+  <option value="az">Azerbaijan</option>
+  <option value="bs">Bahamas</option>
+  <option value="bh">Bahrain</option>
+  <option value="bd">Bangladesh</option>
+  <option value="bb">Barbados</option>
+  <option value="by">Belarus</option>
+  <option value="be">Belgium</option>
+  <option value="bz">Belize</option>
+  <option value="bj">Benin</option>
+  <option value="bt">Bhutan</option>
+  <option value="bo">Bolivia</option>
+  <option value="ba">Bosnia Herzegovina</option>
+  <option value="bw">Botswana</option>
+  <option value="br">Brazil</option>
+  <option value="bn">Brunei</option>
+  <option value="bg">Bulgaria</option>
+  <option value="bf">Burkina</option>
+  <option value="bi">Burundi</option>
+  <option value="kh">Cambodia</option>
+  <option value="cm">Cameroon</option>
+  <option value="ca">Canada</option>
+  <option value="cv">Cape Verde</option>
+  <option value="cf">Central African Rep</option>
+  <option value="td">Chad</option>
+  <option value="cl">Chile</option>
+  <option value="cn">China</option>
+  <option value="co">Colombia</option>
+  <option value="km">Comoros</option>
+  <option value="cd">Congo</option>
+  <option value="cg">Congo {Democratic Rep}</option>
+  <option value="cr">Costa Rica</option>
+  <option value="hr">Croatia</option>
+  <option value="cu">Cuba</option>
+  <option value="cy">Cyprus</option>
+  <option value="cz">Czech Republic</option>
+  <option value="dk">Denmark</option>
+  <option value="dj">Djibouti</option>
+  <option value="dm">Dominica</option>
+  <option value="do">Dominican Republic</option>
+  <option value="tl">East Timor</option>
+  <option value="ec">Ecuador</option>
+  <option value="eg">Egypt</option>
+  <option value="sv">El Salvador</option>
+  <option value="gq">Equatorial Guinea</option>
+  <option value="er">Eritrea</option>
+  <option value="ee">Estonia</option>
+  <option value="et">Ethiopia</option>
+  <option value="fj">Fiji</option>
+  <option value="fi">Finland</option>
+  <option value="fr">France</option>
+  <option value="ga">Gabon</option>
+  <option value="gm">Gambia</option>
+  <option value="ge">Georgia</option>
+  <option value="de">Germany</option>
+  <option value="gh">Ghana</option>
+  <option value="gr">Greece</option>
+  <option value="gd">Grenada</option>
+  <option value="gt">Guatemala</option>
+  <option value="gn">Guinea</option>
+  <option value="gw">Guinea-Bissau</option>
+  <option value="gy">Guyana</option>
+  <option value="ht">Haiti</option>
+  <option value="hn">Honduras</option>
+  <option value="hu">Hungary</option>
+  <option value="is">Iceland</option>
+  <option value="in">India</option>
+  <option value="id">Indonesia</option>
+  <option value="ir">Iran</option>
+  <option value="iq">Iraq</option>
+  <option value="ie">Ireland {Republic}</option>
+  <option value="il">Israel</option>
+  <option value="it">Italy</option>
+  <option value="ci">Ivory Coast</option>
+  <option value="jm">Jamaica</option>
+  <option value="jp">Japan</option>
+  <option value="jo">Jordan</option>
+  <option value="kz">Kazakhstan</option>
+  <option value="ke">Kenya</option>
+  <option value="ki">Kiribati</option>
+  <option value="kp">Korea North</option>
+  <option value="kr">Korea South (Kpop)</option>
+  <option value="xk">Kosovo</option>
+  <option value="kw">Kuwait</option>
+  <option value="kg">Kyrgyzstan</option>
+  <option value="la">Laos</option>
+  <option value="lv">Latvia</option>
+  <option value="lb">Lebanon</option>
+  <option value="ls">Lesotho</option>
+  <option value="lr">Liberia</option>
+  <option value="ly">Libya</option>
+  <option value="li">Liechtenstein</option>
+  <option value="lt">Lithuania</option>
+  <option value="lu">Luxembourg</option>
+  <option value="mk">Macedonia</option>
+  <option value="mg">Madagascar</option>
+  <option value="mw">Malawi</option>
+  <option value="my">Malaysia</option>
+  <option value="mv">Maldives</option>
+  <option value="ml">Mali</option>
+  <option value="mt">Malta</option>
+  <option value="mh">Marshall Islands</option>
+  <option value="mr">Mauritania</option>
+  <option value="mu">Mauritius</option>
+  <option value="mx">Mexico</option>
+  <option value="fm">Micronesia</option>
+  <option value="md">Moldova</option>
+  <option value="mc">Monaco</option>
+  <option value="mn">Mongolia</option>
+  <option value="me">Montenegro</option>
+  <option value="ma">Morocco</option>
+  <option value="mz">Mozambique</option>
+  <option value="mm">Myanmar, {Burma}</option>
+  <option value="na">Namibia</option>
+  <option value="nr">Nauru</option>
+  <option value="np">Nepal</option>
+  <option value="nl">Netherlands</option>
+  <option value="nz">New Zealand</option>
+  <option value="ni">Nicaragua</option>
+  <option value="ne">Niger</option>
+  <option value="ng">Nigeria</option>
+  <option value="no">Norway</option>
+  <option value="om">Oman</option>
+  <option value="pk">Pakistan</option>
+  <option value="pw">Palau</option>
+  <option value="pa">Panama</option>
+  <option value="pg">Papua New Guinea</option>
+  <option value="py">Paraguay</option>
+  <option value="pe">Peru</option>
+  <option value="ph">Philippines</option>
+  <option value="pl">Poland</option>
+  <option value="pt">Portugal</option>
+  <option value="qa">Qatar</option>
+  <option value="ro">Romania</option>
+  <option value="ru">Russian Federation</option>
+  <option value="rw">Rwanda</option>
+  <option value="kn">St Kitts &amp; Nevis</option>
+  <option value="lc">St Lucia</option>
+  <option value="vc">Saint Vincent &amp; the Grenadines</option>
+  <option value="ws">Samoa</option>
+  <option value="sm">San Marino</option>
+  <option value="st">Sao Tome &amp; Principe</option>
+  <option value="sa">Saudi Arabia</option>
+  <option value="sn">Senegal</option>
+  <option value="rs">Serbia</option>
+  <option value="sc">Seychelles</option>
+  <option value="sl">Sierra Leone</option>
+  <option value="sg">Singapore</option>
+  <option value="sk">Slovakia</option>
+  <option value="si">Slovenia</option>
+  <option value="sb">Solomon Islands</option>
+  <option value="so">Somalia</option>
+  <option value="za">South Africa</option>
+  <option value="ss">South Sudan</option>
+  <option value="es">Spain</option>
+  <option value="lk">Sri Lanka</option>
+  <option value="sd">Sudan</option>
+  <option value="sr">Suriname</option>
+  <option value="sz">Swaziland</option>
+  <option value="se">Sweden</option>
+  <option value="ch">Switzerland</option>
+  <option value="sy">Syria</option>
+  <option value="tw">Taiwan</option>
+  <option value="tj">Tajikistan</option>
+  <option value="tz">Tanzania</option>
+  <option value="th">Thailand</option>
+  <option value="tg">Togo</option>
+  <option value="to">Tonga</option>
+  <option value="tt">Trinidad &amp; Tobago</option>
+  <option value="tn">Tunisia</option>
+  <option value="tr">Turkey</option>
+  <option value="tm">Turkmenistan</option>
+  <option value="tv">Tuvalu</option>
+  <option value="ug">Uganda</option>
+  <option value="ua">Ukraine</option>
+  <option value="ae">United Arab Emirates</option>
+  <option value="gb">United Kingdom</option>
+  <option value="us">United States</option>
+  <option value="uy">Uruguay</option>
+  <option value="uz">Uzbekistan</option>
+  <option value="vu">Vanuatu</option>
+  <option value="va">Vatican City</option>
+  <option value="ve">Venezuela</option>
+  <option value="vn">Vietnam</option>
+  <option value="ye">Yemen</option>
+  <option value="zm">Zambia</option>
+  <option value="zw">Zimbabwe</option>
+</select>
+
+    <input type="reset" value="Reset">
+    <input type="submit" value="Submit">
+  </form>
+  <p class="footer">Made by Subhodeep Dey, 21BCE2347</p>
+  
+<script>
+  function validateForm() {
+    var firstName = document.getElementById("firstName").value;
+    var lastName = document.getElementById("lastName").value;
+    var email = document.getElementById("email").value;
+    var password = document.getElementById("password").value;
+    var confirmPassword = document.getElementById("confirm-password").value;
+
+    // Check if any required field is empty
+    if (firstName === "" || lastName === "" || email === "" || password === "" || confirmPassword === "") {
+      alert("Please fill in all required fields");
+      return false;
+    }
+
+    // Check if passwords match
+    if (password !== confirmPassword) {
+      alert("Passwords do not match");
+      return false;
+    }
+
+    // Other validation checks can be added here
+
+    return true; // Form submission will proceed if all validation checks pass
+  }
+</script>
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+  
+  <script>
+    $(document).ready(function() {
+  // Initialize select2 plugin for country code dropdown
+  $('#country-code').select2({
+    templateResult: formatCountryOption,
+    templateSelection: formatCountryOption
+  });
+});
+
+// Custom formatting function for country option in select2 dropdown
+function formatCountryOption(option) {
+  if (!option.id) {
+    return option.text;
+  }
+
+  var countryCode = $(option.element).data('country');
+  var flagClass = 'flag-icon flag-icon-' + countryCode;
+  var flagHtml = '<span class="' + flagClass + '"></span>';
+  var countryText = option.text;
+
+  return $(flagHtml).add(countryText);
+}
+
+  </script>
+
+
+</body>
+</html>
