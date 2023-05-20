@@ -1,0 +1,210 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: lightgreen;
+}
+
+h1 {
+  text-align: center;
+  font-weight: bold;
+}
+
+form {
+  max-width: 400px;
+  margin: 0 auto;
+  border: 2px solid darkgreen;
+  border-radius: 10px;
+  background-color: white;
+  padding: 20px;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 5px;
+}
+
+h1 {
+  text-align: center;
+  font-weight: bold;
+}
+
+.radio-group,
+.checkbox-group {
+  margin-top: 5px;
+}
+
+.radio-group label,
+.checkbox-group label {
+  display: inline-block;
+  margin-right: 10px;
+  display: inline-block;
+  margin-right: 10px;
+  font-weight: normal;
+}
+
+input[type="submit"],
+input[type="reset"] {
+  display: inline-block;
+  width: 49%;
+  padding: 12px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+input[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+}
+
+input[type="reset"] {
+  background-color: #FF5252;
+  color: white;
+}
+
+input[type="submit"]:hover {
+  background-color: #388E3C;
+}
+
+input[type="reset"]:hover {
+  background-color: #D32F2F;
+}
+
+.name-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.name-field {
+  flex: 1;
+  margin-right: 10px;
+}
+
+/* Checkbox */
+.checkbox-group input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 15px;
+  height: 15px;
+  border: 2px solid darkgreen;
+  border-radius: 3px;
+  outline: none;
+  cursor: pointer;
+}
+
+.checkbox-group input[type="checkbox"]:checked {
+  background-color: blue;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 10px;
+}
+
+/* Dropdown */
+select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: blue;
+  box-sizing: border-box;
+  margin-top: 5px;
+  background-color: white;
+  color: black;
+}
+
+select:focus {
+  outline: none;
+  border-color: blue;
+  box-shadow: 0 0 5px blue;
+}
+
+.footer {
+  text-align: center;
+  font-size: 12px;
+  color: black;
+  margin-top: 20px;
+}
+
+#dob {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 5px;
+}
+
+#password-strength-bar {
+  height: 10px;
+  margin-top: 5px;
+  background-color: #ccc;
+}
+
+#password-strength-bar:after {
+  content: "";
+  display: block;
+  height: 100%;
+  background-color: red;
+  width: 0;
+  transition: width 0.3s;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.phone-input {
+  display: flex;
+  align-items: center;
+}
+
+#phone-section {
+  display: flex;
+  align-items: center;
+}
+
+#country-code {
+  flex: 1;
+  padding-right: 5px;
+}
+
+#phone-number {
+ flex: 2;
+  padding-left: 5px;
+}
+
+.phone-input select {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px 0 0 4px;
+}
+
+.phone-input input[type="text"] {
+  flex: 3;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 0 4px 4px 0;
+}
+
+.flag-icon {
+    margin-right: 5px;
+ }
